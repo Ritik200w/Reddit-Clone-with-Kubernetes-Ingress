@@ -1,7 +1,6 @@
-FROM node:12.2.0-alpine
-WORKDIR app
+FROM node:19-apline3.15
+WORKDIR /reddit-clone
 COPY . .
 RUN npm install
-RUN npm run firebase
-EXPOSE 8000
-CMD ["node","next.config.js"]
+EXPOSE 3000
+CMD ["npm", "run", "dev"]
